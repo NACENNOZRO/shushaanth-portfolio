@@ -5,7 +5,7 @@
 
 A personal portfolio spanning **cybersecurity**, **full-stack development**, **applied AI** and **automation**.
 
-[Explore the Portfolio](https://shushaanth-engineering-portfolio.shushaanth25.chatgpt.site) · [LinkedIn](https://www.linkedin.com/in/shushaanth-stephen-7bb498288/) · [GitHub](https://github.com/NACENNOZRO) · [Contact](mailto:shushaanth25@gmail.com)
+[Explore the Portfolio](https://shushaanth-portfolio.vercel.app/) · [LinkedIn](https://www.linkedin.com/in/shushaanth-stephen-7bb498288/) · [GitHub](https://github.com/NACENNOZRO) · [Contact](mailto:shushaanth25@gmail.com)
 
 **16 project stories** · **Responsive design** · **Accessible dialogs** · **Zero runtime dependencies**
 
@@ -62,7 +62,7 @@ Import this repository into Vercel and use the included configuration:
 | --- | --- |
 | Framework preset | Other |
 | Build command | None |
-| Output directory | `dist` |
+| Output directory | `.` |
 | Root directory | Repository root |
 
 The portfolio contains only static HTML, CSS, JavaScript and local images. No environment variables or external API keys are needed.

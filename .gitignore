@@ -1,0 +1,7 @@
+.vercel/
+.openai/
+.env
+.env.*
+node_modules/
+.DS_Store
+__pycache__/

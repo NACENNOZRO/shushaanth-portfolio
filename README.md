@@ -49,7 +49,7 @@ An editorial-style portfolio with a charcoal and lime palette, a personal portra
 Requires Python 3 to serve the static files:
 
 ```bash
-python3 -m http.server 8000 --directory dist
+python3 -m http.server 8000 --directory .
 ```
 
 Open `http://localhost:8000`. There is no package installation or build step.
@@ -75,7 +75,7 @@ The portfolio contains only static HTML, CSS, JavaScript and local images. No en
 | `./projects.js` | Project descriptions, technologies and stage labels |
 | `./app.js` | Category filters and case-study dialogs |
 | `./style.css` | Layout, theme and responsive styles |
-| `` | Portrait and project illustrations |
+| `*.png` | Portrait and project illustrations |
 | `vercel.json` | Static hosting configuration |
 
 ## About the builder

@@ -1,0 +1,26 @@
+#!/usr/sbin/nft -f
+# EXAMPLE ONLY. Validate interfaces and preserve required management access.
+# Applying a ruleset can disconnect you; test in a disposable VM with console access.
+flush ruleset
+
+table inet dprotect_filter {
+    chain input {
+        type filter hook input priority 0; policy drop;
+        iifname "lo" accept
+        ct state established,related accept
+        ct state invalid drop
+        ip protocol icmp accept
+        ip6 nexthdr icmpv6 accept
+        # Add explicit, restricted SSH/management access for your lab here.
+    }
+
+    chain forward {
+        type filter hook forward priority 0; policy drop
+        ct state established,related accept
+        # Add only required forwarding flows for your topology.
+    }
+
+    chain output {
+        type filter hook output priority 0; policy accept
+    }
+}

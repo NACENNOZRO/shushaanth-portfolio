@@ -1,0 +1,25 @@
+# Illustrative template only. Review addresses, ports, and health checks.
+global
+    log stdout format raw local0
+    maxconn 2000
+
+defaults
+    log global
+    mode http
+    option httplog
+    timeout connect 5s
+    timeout client 30s
+    timeout server 30s
+
+frontend dprotect_http
+    bind *:8080
+    default_backend firewall_pool
+
+# Static sample pool; the Python rotation prototype is not wired to HAProxy.
+backend firewall_pool
+    balance leastconn
+    option httpchk GET /
+    http-check expect status 200
+    server fw_a 192.168.64.4:8081 check
+    # server fw_b 192.168.64.5:8081 check
+    # server fw_c 192.168.64.6:8081 check
